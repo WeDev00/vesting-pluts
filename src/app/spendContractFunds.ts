@@ -112,6 +112,14 @@ async function claimVesting() {
   );
   //tx.signWith(privateKey);
 
+  console.log(
+    JSON.stringify(
+      tx.toJson(),
+      undefined,
+      2
+    )
+  );
+
   try {
     const submittedTx = await Blockfrost.submitTx(tx);
     console.log("tx submitted: ", submittedTx);
